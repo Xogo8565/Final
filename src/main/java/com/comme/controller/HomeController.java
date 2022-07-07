@@ -3,13 +3,13 @@ package com.comme.controller;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class HomeController {
     Logger logger = LoggerFactory.getLogger(HomeController.class);
 
-    @RequestMapping("/")
+    @GetMapping("/")
     public String home() throws Exception {
         logger.info("home");
         return "home";
