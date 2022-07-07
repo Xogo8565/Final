@@ -15,7 +15,13 @@
         <property name="url" value="jdbc:oracle:thin:@localhost:1521:xe"/>
         <property name="initialSize" value="30"/>
     </bean>
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="basicDataSource"/>
+        <property name="mapperLocations" value="classpath:mappers/*_mapper.xml"/>
+        <property name="configLocation" value="classpath:mappers/config.xml" />
+    </bean>
 
+<<<<<<< HEAD
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="basicDataSource"/>
         <property name="mapperLocations" value="classpath:mappers/*mapper.xml"/>
@@ -26,5 +32,10 @@
 		<constructor-arg ref="sqlSessionFactory" />
 	</bean>
     
+=======
+    <bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
+        <constructor-arg ref="sqlSessionFactory"/>
+    </bean>
+>>>>>>> be6a308 (수정)
     <my-batis-spring:scan base-package="com.comme.*"/>
 </beans>
