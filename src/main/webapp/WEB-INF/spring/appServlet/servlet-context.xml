@@ -12,7 +12,6 @@
         <property name="suffix" value=".jsp"/>
     </bean>
 
-    <task:annotation-driven/>
     <mvc:annotation-driven/>
     <context:component-scan base-package="com.comme.*"/>
 
