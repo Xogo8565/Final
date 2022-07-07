@@ -28,8 +28,5 @@
 	</bean>
     
 
-    <bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
-        <constructor-arg ref="sqlSessionFactory"/>
-    </bean>
     <my-batis-spring:scan base-package="com.comme.*"/>
 </beans>
